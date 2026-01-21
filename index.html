@@ -1,20 +1,18 @@
-<!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <title>JavaScript Popup Demo</title>
+    <title>JavaScript Popup and Functions</title>
 
     <script>
-        // Function to display current date in textbox
+        
         function displayDate() {
-            var today = new Date();
+            const today = new Date();
             document.getElementById("dateBox").value =
                 today.toLocaleDateString();
         }
 
-        // Function to calculate factorial using prompt and alert
+        
         function calculateFactorial() {
-            var n = prompt("Enter a number to calculate its factorial:");
+            let n = prompt("Enter a number to calculate its factorial:");
 
             if (n === null || n === "" || isNaN(n) || n < 0) {
                 alert("Please enter a valid non-negative number.");
@@ -22,10 +20,10 @@
             }
 
             n = parseInt(n);
-            var fact = 1;
+            let fact = 1;
 
-            for (var i = 1; i <= n; i++) {
-                fact = fact * i;
+            for (let i = 1; i <= n; i++) {
+                fact *= i;
             }
 
             alert("The factorial of " + n + " is " + fact + ".");
@@ -34,13 +32,12 @@
 </head>
 
 <body>
-    <h2>JavaScript POP-UP Boxes and Functions</h2>
+    <h3>JavaScript POP-UP Boxes and Functions</h3>
 
+    
     <button onclick="displayDate()">Display Date</button>
     <input type="text" id="dateBox" readonly>
-
-    <br><br>
-
     <button onclick="calculateFactorial()">Calculate Factorial</button>
+
 </body>
 </html>
